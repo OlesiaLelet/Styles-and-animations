@@ -1,8 +1,21 @@
-
 body {
     background-color: black;
     color: white;
 }
+.content {
+    width: 100%;
+
+}
+/* .container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    
+
+} */
 .content__header {
     display: flex;
     flex-direction: column;
@@ -24,19 +37,15 @@ body {
     gap: 15px;
     
 }
-.form__name {
-    display: flex;
-}
-
 .form__subs {
     display: flex;
-    width: 80%;
+    width: 100%;
     font-size: 17px;
     line-height: 25px;
    
     
 }
-.form__firstN, .form__lastN, .form__email, .form__pwd {
+.form__email, .form__pwd {
     height: 45px;
     width: 100%;
     box-sizing: border-box;
@@ -49,10 +58,6 @@ body {
   
 
 }
-
-.form__firstN {
-    margin-right: 5px;
-}
 .form__check {
     width: 20px;
     height: 20px;
@@ -61,7 +66,7 @@ body {
     border: 1px solid white;
     margin-right: 9px;
 }
-.button__signUp {
+.button__signIn, .content__button {
     background-image: linear-gradient(#71b7ed, #4291d2);
     border: 1px solid #0077CC;
     border-radius: 4px;
@@ -79,9 +84,14 @@ body {
     text-align: center;
     touch-action: manipulation;
     white-space: nowrap;
+    align-self: center;
 }
+.content__button {
+    width: 100px;
+}
+
 .button__signUp:hover {
-    background-image: linear-gradient(#5fb0ed, #3585c7);
+    background-image: linear-gradient(#5fb0ed, #296697);
     border-color: #1482D0;
     text-decoration: none;
   }
@@ -92,17 +102,27 @@ body {
     border-color: #67acde;
     outline: none;
   }
-  .firstN__invalid, .email__invalid, .lastN__invalid, .pwd__invalid  {
-    height: 45px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0px;
-    border: 1.5px solid red;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 5px;
+  .content__welcome {
+    display: flex;
+    justify-content: center;
+   flex-direction: column;
   }
-  .error {
-    color: red; 
-    margin: 0px;
+  .content__h {
+    align-self: center;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+    -webkit-text-fill-color: white !important;
+}
+.content__doNotHaveAcc {
+    padding: 10px;
+    color: #71b7ed;
+    ;
+}
+/* .content__message {
+    padding: 20px 0px 10px 10px;
+    justify-content: center;
+} */

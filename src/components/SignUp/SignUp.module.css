@@ -1,10 +1,18 @@
+
 body {
     background-color: black;
     color: white;
 }
-.content {
-    width: 100%;
-}
+/* .container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    
+
+} */
 .content__header {
     display: flex;
     flex-direction: column;
@@ -26,15 +34,19 @@ body {
     gap: 15px;
     
 }
+.form__name {
+    display: flex;
+}
+
 .form__subs {
     display: flex;
-    width: 80%;
+    width: 100%;
     font-size: 17px;
     line-height: 25px;
    
     
 }
-.form__email, .form__pwd {
+.form__firstN, .form__lastN, .form__email, .form__pwd {
     height: 45px;
     width: 100%;
     box-sizing: border-box;
@@ -47,6 +59,10 @@ body {
   
 
 }
+
+.form__firstN {
+    margin-right: 5px;
+}
 .form__check {
     width: 20px;
     height: 20px;
@@ -55,7 +71,7 @@ body {
     border: 1px solid white;
     margin-right: 9px;
 }
-.button__signIn {
+.button__signUp {
     background-image: linear-gradient(#71b7ed, #4291d2);
     border: 1px solid #0077CC;
     border-radius: 4px;
@@ -86,3 +102,25 @@ body {
     border-color: #67acde;
     outline: none;
   }
+  .firstN__invalid, .email__invalid, .lastN__invalid, .pwd__invalid  {
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 1.5px solid red;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+  }
+  .error {
+    color: red; 
+    margin: 0px;
+  }
+.content__haveAcc {
+padding: 10px;
+color: #71b7ed;
+}
+.content__message {
+   margin: auto;
+    padding-top: 30px;
+}

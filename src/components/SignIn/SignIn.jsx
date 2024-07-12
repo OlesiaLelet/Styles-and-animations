@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "./SignIn.module.css"
-import icon from '../icons/padlock.png';
+import icon from '../../icons/padlock.png';
+import SignUp from "../SignUp/SignUp";
 
 const SignIn = () => {
 
@@ -9,6 +10,7 @@ const SignIn = () => {
     const [pwd, setPwd] = useState("");
     const [isRemembered, setIsRemembered] = useState(false);
     const [isLog, setIsLog] = useState(false);
+    const [isNotHaveAcc, setIsNotHaveAcc] = useState(false);
 
     useEffect ( () => {
     const emailStore = localStorage.getItem("email");
@@ -64,6 +66,10 @@ const SignIn = () => {
         const {checked} = e.target;
         setIsRemembered(checked);
     }
+
+    const handlerClick = () => {
+        setIsNotHaveAcc(true);
+    }
    
        
        
@@ -72,10 +78,11 @@ const SignIn = () => {
 
     return (
         <div className={styles.content}>
-            {isLog ? 
-            <div>
-            <div>WELCOME</div>
-            <button onClick={handleLogOut}>Log Out</button>
+
+            {!isNotHaveAcc ? isLog ? 
+            <div className={styles.content__welcome}>
+            <h1 className={styles.content__h}>WELCOME!</h1>
+            <button  className={styles.content__button} onClick={handleLogOut}>Log Out</button>
             </div>
              : 
              <div>
@@ -93,7 +100,10 @@ const SignIn = () => {
                     </span>  
                     <button type="submit" className={styles.button__signIn} on>SIGN IN</button>
                 </form>
+                <a className={styles.content__doNotHaveAcc} onClick={handlerClick}>Don't have an account ? Sign UP</a>
+                {/* <div className={ styles.content__message}>Copyright Your Website 2024</div> */}
                 </div>
+                : <SignUp/>
           
             }
         </div>

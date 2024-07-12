@@ -5,15 +5,15 @@
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    margin-top: 100px;
-    
+    margin-top: 50px;
+  }
+.content {
+  gap: 20px;
 
 }
-.contant {
-  gap: 20px;
-}
-.container__question {
+.content__question {
   font-size: 20px;
+  padding: 20px 10px; 
 }
 .button__signIn, .button__signUp {
     background-image: linear-gradient(#42A1EC, #0070C9);
@@ -33,6 +33,8 @@
     text-align: center;
     touch-action: manipulation;
     white-space: nowrap;
+    margin-bottom: 50px;
+    /* margin: 0px 10px 10px 10px; */
 }
 
 
@@ -59,4 +61,11 @@
     background-image: linear-gradient(#3D94D9, #0067B9);
     border-color: #006DBC;
     outline: none;
+  }
+  .content__line {
+    border-top: 1px solid grey;
+
+  }
+  .content__haveAcc {
+    padding-top: 20px;
   }

@@ -1,4 +1,4 @@
-import Enter from './components/Enter'
+import Enter from './components/Enter/Enter'
 import './App.css';
 
 function App() {
